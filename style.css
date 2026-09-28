@@ -1,0 +1,260 @@
+/* VARIABEL WARNA (Sesuai Skema Kamu) */
+:root {
+  --bg-body: #ffffff;          /* Utama 1: Putih */
+  --green-main: #2e7d32;       /* Utama 2: Hijau */
+  --green-light: #e8f5e9;      /* Aksen Hijau Muda */
+  --gray-card: #f8f9fa;        /* Utama 3: Abu-abu Card */
+  --gray-border: #e9ecef;      /* Garis Abu-abu */
+  --text-dark: #2c3e50;        /* Teks Utama */
+  --text-muted: #6c757d;       /* Teks Sub */
+  --yellow-btn: #fbc02d;       /* Tombol Kuning */
+  --yellow-hover: #f57f17;     /* Hover Tombol */
+}
+
+/* RESET & FONTS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* CONTAINER LEBAR */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* HEADER MODERN */
+header {
+  background-color: var(--green-main);
+  color: #ffffff;
+  padding: 48px 20px;
+  border-bottom: 5px solid #1b5e20;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+main {
+  margin-top: 10px;
+}
+
+/* GRID 2 KOLOM (1 ROW = 2 CARD) */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.row > * {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 290px;
+}
+
+/* DESAIN CARD ELEGANKAN */
+.card {
+  background-color: var(--gray-card);
+  border: 1px solid var(--gray-border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* JUDUL DI DALAM CARD */
+h2 {
+  color: var(--green-main);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--green-light);
+  display: inline-block;
+}
+
+/* KOTAK FOTO PROFIL */
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.photo-frame {
+  padding: 4px;
+  background-color: #ffffff;
+  border: 2px solid var(--green-main);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-photo {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-main);
+  margin-bottom: 4px;
+}
+
+.profile-nrp {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green-main);
+  background-color: var(--green-light);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* TABEL DATA PRIBADI */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th, 
+.info-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--gray-border);
+  font-size: 0.9rem;
+}
+
+.info-table th {
+  text-align: left;
+  width: 32%;
+  color: var(--green-main);
+  font-weight: 600;
+}
+
+.info-table td {
+  color: var(--text-dark);
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* DAFTAR CUSTOM (PENDIDIKAN & HOBI) */
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.list-badge {
+  background-color: var(--green-light);
+  color: var(--green-main);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  min-width: 42px;
+  text-align: center;
+}
+
+.sub-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.list-num {
+  background-color: var(--green-main);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TOMBOL AKSI (KUNING) */
+.button-group {
+  margin: 20px 0 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--yellow-btn);
+  color: #111111;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--yellow-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* FOOTER */
+footer {
+  background-color: #f1f3f5;
+  color: var(--text-muted);
+  padding: 24px 20px;
+  font-size: 0.85rem;
+  margin-top: 40px;
+  border-top: 1px solid var(--gray-border);
+}
+
+.copyright {
+  margin-top: 6px;
+  font-size: 0.8rem;
+}
